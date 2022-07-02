@@ -11,7 +11,9 @@ RUN npm cache clean -f; \
     npm install n -g; \
     n stable; 
 
-RUN npm install -g fs-extra puppeteer path;
+# Install Puppeteer under /node_modules so it's available system-wide
+ADD package.json package-lock.json /
+RUN npm install
 
 RUN npm install -g @sap/dwc-cli;
 
