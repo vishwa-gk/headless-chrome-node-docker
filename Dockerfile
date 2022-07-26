@@ -19,5 +19,6 @@ ADD package.json package-lock.json /
 #  Now if you check the package.jso and package-lock.json you should see the dependency list.
 RUN npm install
 
+
 # Build command 
 # docker build -t vishwagi/puppeteer-dwc-node-docker:latest .
